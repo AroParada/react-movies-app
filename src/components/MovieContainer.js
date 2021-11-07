@@ -4,7 +4,6 @@ import Card from "./Card";
 import API from "../utils/API";
 import swal from 'sweetalert';
 
-
 class MovieContainer extends Component {
   state = {
     results: {},
