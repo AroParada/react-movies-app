@@ -26,7 +26,7 @@ class MovieContainer extends Component {
       return
     }
     this.setState({results: res.data.results[0]})
-    console.log(this.state.results)
+    // console.log(this.state.results)
 
     })
     .catch((err) => console.log(err));
@@ -35,7 +35,7 @@ class MovieContainer extends Component {
   handleInputChange = event => {
     const name = event.target.name;
     const value = event.target.value;
-    console.log('the value is', value)
+    // console.log('the value is', value)
     this.setState({
     [name]: value
   })
@@ -43,7 +43,7 @@ class MovieContainer extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log('button clicked')
+    this.searchMovies(this.state.search)
   }
 
   render() {
