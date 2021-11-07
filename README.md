@@ -4,7 +4,7 @@ Published site: [React Movie Search](https://react-movie-searchapp.herokuapp.com
 
 This web application features an interactive polished modern UI that displays relavant information relating to query results including a link to the results TMDB movie page. If no movie is found a friendly alert will let the user know that no movie was found.
 
-<img src="src\assets\Screenshot(52).png">
+<img src="src\assets\Screenshot (52).png">
 
 ## Application Details
 
