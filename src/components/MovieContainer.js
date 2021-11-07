@@ -20,7 +20,7 @@ class MovieContainer extends Component {
     API.search(query)
     .then((res) => {
       console.log('Response', res.data);
-    if(res.data.error){
+    if(res.data.Error){
       this.setState({ notfound: true })
       swal("Oops!", "no movie found", "error");
       return
@@ -41,12 +41,18 @@ class MovieContainer extends Component {
   })
   }
 
+  handleFormSubmit = event => {
+    event.preventDefault();
+    console.log('button clicked')
+  }
+
   render() {
     return (
       <div className="container center-align">
          <SearchBar 
          value={this.state.search}
          handleInputChange={this.handleInputChange}
+         handleFormSubmit={this.handleFormSubmit}
           />
          <Card
          heading={this.state.results.title}

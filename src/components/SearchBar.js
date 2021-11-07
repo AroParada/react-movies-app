@@ -14,7 +14,7 @@ function SearchBar (props) {
                onChange={props.handleInputChange}
                value={props.value}
                />
-              <button onClick={props.handleFormsubmit} className="btn waves-effect waves-light " type="submit" name="action">Search
+              <button onClick={props.handleFormSubmit} className="btn waves-effect waves-light " type="submit" name="action">Search
                 <i className="material-icons right">send</i>
               </button>
             <label htmlFor="icon_prefix">Search for a movie</label>
