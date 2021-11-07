@@ -33,12 +33,21 @@ class MovieContainer extends Component {
   }
   
   handleInputChange = event => {
-
+    const name = event.target.name;
+    const value = event.target.value;
+    console.log('the value is', value)
+    this.setState({
+    [name]: value
+  })
   }
+
   render() {
     return (
       <div className="container center-align">
-         <SearchBar onChange={this.handleInputChange} />
+         <SearchBar 
+         value={this.state.search}
+         handleInputChange={this.handleInputChange}
+          />
          <Card
          heading={this.state.results.title}
          src={"https://image.tmdb.org/t/p/w500/"+this.state.results.poster_path}
@@ -46,9 +55,7 @@ class MovieContainer extends Component {
          released={this.state.results.release_date}
          language={this.state.results.original_language}
          url={"https://www.themoviedb.org/movie/"+this.state.results.id}
-
          />
-         
       </div>
     )
   }

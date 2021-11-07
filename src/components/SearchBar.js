@@ -8,8 +8,9 @@ function SearchBar (props) {
           <div className="input-field col s12 " >
             <i className="material-icons prefix" >search</i>
               <input
-               id="icon_prefix" 
+               id="search"
                type="text"  
+               name="search"
                onChange={props.handleInputChange}
                value={props.value}
                />
