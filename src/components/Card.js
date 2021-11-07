@@ -4,13 +4,13 @@ function Card (props) {
   
     return (
       <div className="col s12 m7">
-      <div className="card horizontal medium hoverable">
-        <div className="card-image">
-          <img alt={props.title} src={props.src}/>
+      <div className="card-image">
+          <img responsive-img alt={props.title} src={props.src}/>
         </div>
+      <div className="card horizontal medium hoverable">
         <div className="card-stacked">
           <div className="card-content">
-          <h5> {props.heading}</h5>
+          <h4> {props.heading}</h4>
             <p>Overview: {props.overview}</p>
             <h6>Released: {props.released}</h6>
             <h6>Original language: {props.language}</h6>
