@@ -13,29 +13,28 @@ class MovieContainer extends Component {
   };
   
   componentDidMount(){
-    this.searchMovies("Her")
+    this.searchMovies("her")
   }
 
   searchMovies = (query) => {
     API.search(query)
     .then((res) => {
       console.log('Response', res.data);
-    if(res.data.Error){
+    if(res.data.results.length === 0 ){
       this.setState({ notfound: true })
       swal("Oops!", "no movie found", "error");
       return
     }
     this.setState({results: res.data.results[0]})
     // console.log(this.state.results)
-
-    })
+  })
     .catch((err) => console.log(err));
-  }
+  };
   
   handleInputChange = event => {
     const name = event.target.name;
     const value = event.target.value;
-    // console.log('the value is', value)
+    // console.log('value =', value)
     this.setState({
     [name]: value
   })
