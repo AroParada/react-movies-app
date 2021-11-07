@@ -5,7 +5,7 @@ function Card (props) {
     return (
       <div className="col s12 m7">
       <div className="card-image">
-          <img responsive-img alt={props.title} src={props.src}/>
+          <img class="z-depth-5" responsive-img alt={props.title} src={props.src}/>
         </div>
       <div className="card horizontal medium hoverable">
         <div className="card-stacked">
