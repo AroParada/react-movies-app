@@ -1,16 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 
-class SearchBar extends Component {
-  render() {
+function SearchBar (props) {
     return (
       <div className="row">
        <form className="col s12">
         <div className="row">
           <div className="input-field col s12 " >
             <i className="material-icons prefix" >search</i>
-              <input id="icon_prefix" type="text"  ></input>
-              <button class="btn waves-effect waves-light" type="submit" name="action">Search
-                <i class="material-icons right">send</i>
+              <input
+               id="icon_prefix" 
+               type="text"  
+               onChange={props.handleInputChange}
+               value={props.value}
+               />
+              <button onClick={props.handleFormsubmit} className="btn waves-effect waves-light " type="submit" name="action">Search
+                <i className="material-icons right">send</i>
               </button>
             <label htmlFor="icon_prefix">Search for a movie</label>
           </div>
@@ -19,6 +23,5 @@ class SearchBar extends Component {
       </div>
     )
   }
-}
 
 export default SearchBar;

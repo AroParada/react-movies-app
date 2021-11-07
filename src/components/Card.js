@@ -1,26 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Card extends Component {
-  render() {
+function Card (props) {
+  
     return (
-      <div class="col s12 m7">
-      <h2 class="header">Horizontal Card</h2>
-      <div class="card horizontal medium">
-        <div class="card-image">
-          <img alt="poster" src="https://lorempixel.com/100/190/nature/6"/>
+      <div className="col s12 m7">
+      <div className="card horizontal medium hoverable">
+        <div className="card-image">
+          <img alt={props.title} src={props.src}/>
         </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.</p>
+        <div className="card-stacked">
+          <div className="card-content">
+          <h5> {props.heading}</h5>
+            <p>Overview: {props.overview}</p>
+            <h6>Released: {props.released}</h6>
+            <h6>Original language: {props.language}</h6>
           </div>
-          <div class="card-action">
-            <a href="!#">This is a link</a>
+          <div className="card-action">
+            <a target="_blank" rel="noopener" href={props.url}>TMDB movie page</a>
           </div>
         </div>
       </div>
     </div>
     )
   }
-}
 
 export default Card;
