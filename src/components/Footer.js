@@ -1,14 +1,22 @@
 import React, { Component } from "react";
+import { Linkedin } from 'grommet-icons';
 
 class Footer extends Component {
 
   render() {
     return (
-      <div className="footer-copyright">
-            <div className="container">
+      <footer class="page-footer">
+          <footer class="footer-copyright">
+            <div  class="container">
             © 2021 Made by Aro Parada
+            <a class="grey-text text-lighten-4 right" href="#!">
+              
+              <Linkedin color="white" />
+              </a>
             </div>
-          </div>
+          </footer>
+        </footer>
+
 
           
         

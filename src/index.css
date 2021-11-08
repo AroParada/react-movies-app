@@ -18,6 +18,15 @@ img {
   height: auto;
 }
 
+.page-footer {
+  /* position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; */
+  background-color: #29b6f6!important;
+  color: white;
+}
+
 @media only screen and (max-width: 600px) {
   html {
     font-size: 12px !important;
