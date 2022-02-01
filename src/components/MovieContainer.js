@@ -18,14 +18,12 @@ class MovieContainer extends Component {
   searchMovies = (query) => {
     API.search(query)
     .then((res) => {
-      console.log('Response', res.data);
     if(res.data.results.length === 0 ){
       this.setState({ notfound: true })
       swal("Oops!", "no movie found", "error");
       return
     }
     this.setState({results: res.data.results[0]})
-    // console.log(this.state.results)
   })
     .catch((err) => console.log(err));
   };
@@ -33,7 +31,6 @@ class MovieContainer extends Component {
   handleInputChange = event => {
     const name = event.target.name;
     const value = event.target.value;
-    // console.log('value =', value)
     this.setState({
     [name]: value
   })
@@ -44,7 +41,9 @@ class MovieContainer extends Component {
     this.searchMovies(this.state.search)
   }
 
+
   render() {
+  let overview = this.state.results.overview
     return (
       <div className="container center-align">
          <SearchBar 

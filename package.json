@@ -6,6 +6,8 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "@types/yargs": "^17.0.7",
+    "add": "^2.0.6",
     "axios": "^0.24.0",
     "grommet": "^2.18.0",
     "grommet-icons": "^4.6.2",
@@ -16,7 +18,9 @@
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.3",
     "sweetalert": "^2.1.2",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "yargs": "^17.3.0",
+    "yarn": "^1.22.17"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@binarytreereversal/open-project-tabs": "^1.0.6"
   }
 }
