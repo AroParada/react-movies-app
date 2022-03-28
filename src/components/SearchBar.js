@@ -23,7 +23,6 @@ function SearchBar(props) {
               Search
               <i className="material-icons right">send</i>
             </button>
-            <label htmlFor="icon_prefix">Search for a movie</label>
           </div>
         </div>
       </form>
